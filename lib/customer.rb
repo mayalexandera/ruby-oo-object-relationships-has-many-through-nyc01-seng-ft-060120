@@ -22,11 +22,7 @@ class Customer
   end
 
   def waiters
-    waiters = []
-    self.meals.each do |meal|
-      waiters << meal.waiter
-    end
-    waiters
+    meals.map{|meal| meal.waiter}
   end
 
 end
